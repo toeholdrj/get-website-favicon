@@ -1,5 +1,5 @@
 {
-  "name": "get-website-favicon",
+  "name": "@dukethegiant/get-website-favicon",
   "version": "0.0.7",
   "description": "get the favicons url from any website",
   "main": "index.js",
@@ -19,5 +19,17 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^8.2.1"
-  }
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brennon/get-website-favicon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brennon/get-website-favicon/issues"
+  },
+  "homepage": "https://github.com/brennon/get-website-favicon#readme"
 }
