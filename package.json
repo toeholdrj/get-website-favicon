@@ -1,5 +1,5 @@
 {
-  "name": "@dukethegiant/get-website-favicon",
+  "name": "@spro/get-website-favicon",
   "version": "0.0.7",
   "description": "get the favicons url from any website",
   "main": "index.js",
@@ -9,7 +9,7 @@
   "keywords": [
     "favicon"
   ],
-  "author": "brennon",
+  "author": "spro",
   "license": "MIT",
   "dependencies": {
     "axios": "^0.21.1",
@@ -26,10 +26,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brennon/get-website-favicon.git"
+    "url": "git+https://github.com/spro/get-website-favicon.git"
   },
   "bugs": {
-    "url": "https://github.com/brennon/get-website-favicon/issues"
+    "url": "https://github.com/spro/get-website-favicon/issues"
   },
-  "homepage": "https://github.com/brennon/get-website-favicon#readme"
+  "homepage": "https://github.com/spro/get-website-favicon#readme"
 }
