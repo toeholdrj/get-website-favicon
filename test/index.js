@@ -1,23 +1,32 @@
-const getFavicons = require("../");
-const expect = require("chai").expect;
+const getFavicons = require("../")
+const expect = require("chai").expect
 
 describe("getFavicons", () => {
-  it("should return a response for a well-known address", (done) => {
-    const url = "https://www.github.com";
-    getFavicons(url).then((result) => {
-      expect(result.icons).to.be.not.empty;
-      done();
-    });
-  }).timeout(10000);
+    it("should return an array for a well-known address", async () => {
+        const url = "https://www.github.com"
 
-  it("should return an empty list of favicons for a garbage address", (done) => {
-    const url =
-      "https://www.agikjosahgsafdlkjwahejklsahfgjklahfgjhoaeuhjaksfdngaewhrgopasjngklm.com";
+        let result, err
+        try {
+            result = await getFavicons(url)
+        } catch (_err) {
+            err = _err
+        }
+        expect(result.icons).to.be.an('array')
+        expect(result.icons).to.be.not.empty
+        expect(err).to.be.undefined
+    })
 
-    getFavicons(url).then((result) => {
-      expect(result.icons).to.be.an("array");
-      expect(result.icons).to.be.empty;
-      done();
-    });
-  });
-});
+    it("should throw an error for a garbage address", async () => {
+        const url = "https://www.agikjosahgsafdlkjwahejklsahfgjklahfgjhoaeuhjaksfdngaewhrgopasjngklm.com"
+
+        let result, err
+        try {
+            result = await getFavicons(url)
+        } catch (_err) {
+            err = _err
+        }
+        expect(result).to.be.undefined
+        expect(err).to.be.instanceof(Error)
+    })
+
+})
